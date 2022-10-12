@@ -1,0 +1,40 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+*{font-family: 'Spoqa Han Sans Neo', 'sans-serif';}
+
+#signup {
+    width: 100%;
+    height: 1000px;
+}
+
+#signup #card {
+    padding: 50px;
+}
+
+#signup #title {
+    font-size: 40px;
+}
+
+#signup-box {
+    width: 700px;
+}
+
+#signup .form-control {
+    width: 300px;
+}
+
+#signup label {
+    height: 18px;
+    font-size: 18px;
+}
+
+#signup .form-row {
+    width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#signup button {
+    width: 100px;
+    height: 40px;
+}
