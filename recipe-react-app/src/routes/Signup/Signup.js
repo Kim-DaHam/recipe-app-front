@@ -60,40 +60,41 @@ class Signup extends React.Component {
                         <p id="title" className="w3-center w3-padding-32">회원가입</p>
                         <div className="w3-center">
                             <form id="signup-form" onSubmit={this.handleSubmit} action="/action_page.php" className="needs-validation" noValidate>
+                                <label>이름</label>
                                 <div className="form-row">
-                                    <label>이름</label>
                                     <input type="text" className="form-control" 
                                     id="uname" placeholder="이름을 입력하세요." 
                                     name="uname" required/>
                                     <div className="valid-feedback"></div>
                                     <div className="invalid-feedback">-</div>
                                 </div>
-                                <div className="form-row">
-                                    <label>이메일</label>
+                                <label>이메일</label>
+                                <div id="email-input" className="form-row">
                                     <input type="text" className="form-control" 
                                     id="uemail" placeholder="이메일을 입력하세요." 
                                     name="uemail" required/>
                                     <div className="valid-feedback"></div>
                                     <div className="invalid-feedback">-</div>
+                                    <button id="dupl-btn" type="button" class="btn btn-danger">중복확인</button>
                                 </div>
+                                <label>비밀번호</label>
                                 <div className="form-row">
-                                    <label>비밀번호</label>
                                     <input type="text" className="form-control" 
                                     id="upw" placeholder="비밀번호를 입력하세요." 
                                     name="upw" required/>
                                     <div className="valid-feedback"></div>
                                     <div className="invalid-feedback">-</div>
                                 </div>
+                                <label>비밀번호 확인</label>
                                 <div className="form-row">
-                                    <label>비밀번호 확인</label>
                                     <input type="text" className="form-control" 
                                     id="upwh" placeholder="비밀번호를 입력하세요." 
-                                    name="upwh" optional/>
+                                    name="upwh" required/>
                                     <div className="valid-feedback"></div>
                                     <div className="invalid-feedback">비밀번호가 일치하지 않습니다.</div>
                                 </div>
                                 <div className="w3-center w3-padding-32">
-                                    <button type="submit" className="btn btn-secondary">회원가입</button>
+                                    <button id="submit-btn" type="submit" className="btn btn-secondary">회원가입</button>
                                 </div>
                             </form>
                         </div>
