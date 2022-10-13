@@ -56,8 +56,10 @@ class Signup extends React.Component {
         }
         if(!(this.state.email_check)){
             console.log('-이메일 중복체크 미확인!')
-            input_email.classList.add('is-invalid');
+            input_email.classList.remove('is-valid');
+            input_email.childNodes[0].classList.add('is-invalid');
             input_email.childNodes[2].innerHTML='이메일 중복체크를 하세요.';
+            return;
         }
 
         signup({mname: name, memail: email, mpw: pwd})
@@ -72,11 +74,18 @@ class Signup extends React.Component {
         let input_pwd = document.getElementById("pwd-input");
         let input_pwdh = document.getElementById("pwdh-input");
         
+        if(e.target.id === 'uemail' && this.state.email_check===true){
+            e.target.classList.remove('is-valid');
+            e.target.classList.add('is-invalid');
+            input_email.childNodes[1].innerHTML = '';
+            this.setState({email_check: false});
+        }
+
         if(e.target.id === 'uname' || e.target.id === 'upwd'){
             if(e.target.value.length > 20){
                 console.log('글자 초과!');
                 console.log(e.target);
-                e.target.classList.replace('is-valid', 'is-invalid');
+                e.target.classList.add('is-invalid');
                 console.log(e.target);
                 if(e.target.id === 'uname')
                     input_name.childNodes[2].innerHTML = '1자 이상~ 20자 미만으로 작성하세요.';
@@ -85,6 +94,7 @@ class Signup extends React.Component {
             }
             else{
                 console.log('글자 미초과!');
+                e.target.classList.replace('is-invalid', 'is-valid');
                 e.target.classList.add('is-valid');
             }
         }
@@ -108,7 +118,7 @@ class Signup extends React.Component {
             e.target.classList.add('is-invalid');
             input_email.childNodes[2].innerHTML = '이메일 형식에 맞지 않습니다.'
         }
-        else {
+        else if(e.target.id === 'uemail' && (e.target.value.includes('@'))) {
             e.target.classList.replace('is-invalid', 'is-valid');
         }
 
@@ -130,11 +140,13 @@ class Signup extends React.Component {
             email_form.childNodes[2].innerHTML = '이메일을 입력하세요.'
             email.classList.add('is-invalid');
         }
-        else {
+        else if(this.state.email_check===false){
             call("/auth/emailcheck", "POST", email.value).then((response)=>{
-                if(response){
+                if(!response){
                     console.log('-사용 가능!');
                     email_form.childNodes[1].innerHTML = '사용 가능한 이메일 입니다.';
+                    email_form.childNodes[2].innerHTML = '';
+                    email.classList.remove('is-invalid');
                     email.classList.add('is-valid');
                     this.setState({email_check: true});
                 }
