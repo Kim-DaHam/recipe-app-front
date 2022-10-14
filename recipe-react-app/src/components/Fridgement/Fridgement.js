@@ -7,14 +7,14 @@ class Fridgement extends React.Component {
         return (
             <>
             {/* Fridge */}
-            <div id="fridge-container" class=" w3-col w3-card-4 w3-white">
+            <div id="fridge-container" className=" w3-col w3-card-4 w3-white">
                 {/* Ingredients SearchBar */}
-                <div id="ingredients-searchBar" class="w3-container">
-                    <form class="form-inline" action="/action_page.php">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="식재료  검색"/>
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">🔍</span>
+                <div id="ingredients-searchBar" className="w3-container">
+                    <form className="form-inline" action="/action_page.php">
+                        <div className="input-group">
+                            <input type="text" className="form-control" placeholder="식재료  검색"/>
+                            <div className="input-group-prepend">
+                                <span className="input-group-text">🔍</span>
                             </div>
                         </div>
                     </form>
@@ -28,29 +28,29 @@ class Fridgement extends React.Component {
                     </select>
                 </div>
                 {/* Ingredients List */}
-                <div id="ingredients-list" class="w3-container">
-                    <div class="list-group pre-scrollable">
-                        <a href="#" class="list-group-item list-group-item-action">
-                            <input type="checkbox" class="form-check-input"/>
+                <div id="ingredients-list" className="w3-container">
+                    <div className="list-group pre-scrollable">
+                        <a href="#" className="list-group-item list-group-item-action">
+                            <input type="checkbox" className="form-check-input"/>
                             First item
-                            <button type="button" class="btn btn-danger w3-right"><b>―</b></button>
+                            <button type="button" className="btn btn-danger w3-right"><b>―</b></button>
                         </a>
                     </div>
                 </div>
                 {/* Ingredients Btn */}
-                <div id="ingredients-btn" class="w3-container">
-                    <div id="delete-btn" class="w3-row">
+                <div id="ingredients-btn" className="w3-container">
+                    <div id="delete-btn" className="w3-row">
                         <div class="w3-col m8 s12">
                             <p>
-                                <button class="w3-button w3-padding-small w3-white w3-border">
+                                <button className="w3-button w3-padding-small w3-white w3-border">
                                     <b>전체삭제</b>
                                 </button>
                             </p>
                         </div>
-                        <div class="w3-col m4 w3-hide-small">
+                        <div className="w3-col m4 w3-hide-small">
                             <p>
-                                <span class="w3-padding-small w3-right">
-                                    <span class="w3-tag">0</span><b>  선택삭제</b>
+                                <span className="w3-padding-small w3-right">
+                                    <span className="w3-tag">0</span><b>  선택삭제</b>
                                 </span>
                             </p>
                         </div>

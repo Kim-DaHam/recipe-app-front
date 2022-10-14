@@ -1,0 +1,96 @@
+#addrecipe {
+    height: 1000px;
+}
+
+#addrecipe .w3-content {
+    max-width:1000px;
+}
+
+#addrecipe header{
+    text-align: left;
+    padding: 0;
+}
+
+#addrecipe #content-box{
+    margin: 0;
+}
+
+#addrecipe-container {
+    width: 1000px;
+    height: 600px;
+    padding: 60px;
+    padding-left: 100px;
+}
+
+/* add recipe form */
+#addrecipe-form{
+    width: 750px;
+} 
+
+#addrecipe-form #scroll-area{
+    height: 430px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#addrecipe-form .form-row {
+    margin-bottom: 15px;
+}
+#addrecipe-form input, #addrecipe-form select {
+    margin-left: 15px;
+}
+#addrecipe-form label {
+    font-size: 18px;
+}
+
+/* img input form */
+#addrecipe-form #img-input {
+    margin-bottom: 40px;
+}
+#addrecipe-form #img-input img {
+    width: 100px;
+    height: 100px;
+}
+#addrecipe-form #img-input input {
+    margin-top: 9%;
+}
+
+/* name input form */
+#addrecipe-form #name-input input {
+    width: 300px;
+}
+
+/* category input form */
+#addrecipe-form #category-input select {
+    height: 25px;
+    margin-left: 30px;
+}
+
+/* ingredient input form */
+#addrecipe-form #ingredient-input input {
+    width: 250px;
+    margin-right: 15px;
+}
+
+/* howto input form */
+#addrecipe-form #howto-input textarea {
+    margin-left: 15px;
+    width: 500px;
+    height: 100px;
+}
+
+#addrecipe #btn-group {
+    margin-top: 20px;
+}
+
+#addrecipe #addrecipe-btn {
+    height: 45px;
+    float: right;
+    margin-top: 15px;
+    background-color: rgb(43, 195, 255);
+    border: 1px solid rgb(43, 195, 255);
+}
+
+#addrecipe #addrecipe-btn:hover {
+    background-color: rgba(29, 130, 170, 0.992);
+    border: 1px solid rgb(29, 130, 170);
+}

@@ -9,14 +9,14 @@ class AddFridge extends React.Component {
         return (
             <>
             {/* Ingredients Add Form */}
-            <div id="ingredientAdd-container" class="w3-col l4">
-                <div class="w3-card w3-margin w3-margin-top">
-                    <div class="w3-container w3-white">
+            <div id="ingredientAdd-container" className="w3-col l4">
+                <div className="w3-card w3-margin w3-margin-top">
+                    <div className="w3-container w3-white">
                         <h4><b>식재료 추가하기🥬</b></h4><br/>
                         <form onSubmit={'#'}>
                             <label>이름*(필수입력):</label>
                             <div id="name-input" className="form-row">
-                                <input type="text" class="form-control" id="usr" maxLength='25'/>
+                                <input type="text" className="form-control" id="usr" maxLength='25'/>
                             </div>
                             <label>종류 :</label>
                             <div id="category-input" className="form-row">
@@ -31,33 +31,33 @@ class AddFridge extends React.Component {
                             </div>
                             <label>유통기한 :</label>
                             <div id="exdate-input" className="form-row">
-                                <input type="date" class="form-control" id="usr"/>
+                                <input type="date" className="form-control" id="usr"/>
                             </div>
-                            <button type="button" class="btn btn-info">추가하기</button>
+                            <button type="button" className="btn btn-info">추가하기</button>
                         </form>
                     </div>
                 </div><hr/>
             </div><br/>
             {/* Go Recipe Btn */}
-            <div id="recipeOption-container" class="w3-col l4">
+            <div id="recipeOption-container" className="w3-col l4">
                 <label><b>언제 먹을 예정인가요?🍽️ (선택사항)</b></label><br/>
-                <div id="radio-box" class="w3-card w3-margin">
-                    <div class="w3-container">
-                    <div id="radio-group" class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="breakfast"/>아침
+                <div id="radio-box" className="w3-card w3-margin">
+                    <div className="w3-container">
+                    <div id="radio-group" className="form-check">
+                        <label className="form-check-label">
+                            <input type="radio" className="form-check-input" name="breakfast"/>아침
                         </label>
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="lunch"/>점심
+                        <label className="form-check-label">
+                            <input type="radio" className="form-check-input" name="lunch"/>점심
                         </label>
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="dinner"/>저녁
+                        <label className="form-check-label">
+                            <input type="radio" className="form-check-input" name="dinner"/>저녁
                         </label>
                     </div>
                     </div>
                 </div>
                 <Link to="/recipe">
-                    <button type="button" class="btn"><b>레시피 보러가기 》</b></button>
+                    <button type="button" className="btn"><b>레시피 보러가기 》</b></button>
                 </Link>
             </div>
             </>

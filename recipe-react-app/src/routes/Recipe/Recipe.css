@@ -1,0 +1,57 @@
+#recipe {
+    height: 1000px;
+}
+
+#recipe .w3-content {
+    max-width:1000px;
+}
+
+#recipe header{
+    text-align: left;
+    padding: 0;
+}
+
+#recipe #content-box{
+    margin: 0;
+}
+
+#recipe-container {
+    width: 1000px;
+    height: 600px;
+
+}
+
+#recipe #recipe-list {
+    padding: 50px;
+}
+
+#recipe #recipe-list span{
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+#recipe #recipe-list img {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+#recipe #btn-group {
+    margin-top: 20px;
+}
+
+#recipe .pagination {
+    margin-bottom: 40px;
+}
+
+#recipe #recipe-btn {
+    height: 45px;
+    float: right;
+    background-color: plum;
+    border: 1px solid plum;
+}
+
+#recipe #recipe-btn:hover {
+    background-color: rgba(221, 160, 221, 0.777);
+    border: 1px solid rgba(221, 160, 221, 0.777);
+}
