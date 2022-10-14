@@ -19,7 +19,7 @@ class Fridge extends React.Component {
                     {/* Contents */}
                     <div id="content-box" class="w3-col">
                         {/* Fridge */}
-                        <div id="fridge-container" class="w3-card-4 w3-margin w3-white">
+                        <div id="fridge-container" class=" w3-col w3-card-4 w3-margin w3-white">
                             {/* Ingredients SearchBar */}
                             <div id="ingredients-searchBar" class="w3-container">
                                 <form class="form-inline" action="/action_page.php">
@@ -68,6 +68,37 @@ class Fridge extends React.Component {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        {/* Ingredients Add Form */}
+                        <div id="ingredientAdd-container" class="w3-col l4">
+                            <div class="w3-card w3-margin w3-margin-top">
+                                <div class="w3-container w3-white">
+                                    <h4><b>식재료 추가하기🥬</b></h4><br/>
+                                    <form onSubmit={'#'}>
+                                        <label>이름*:</label>
+                                        <div id="name-input" className="form-row">
+                                            <input type="text" class="form-control" id="usr" maxLength='25'/>
+                                        </div>
+                                        <label>종류 :</label>
+                                        <div id="category-input" className="form-row">
+                                            <select name="i-category" id="i-category">
+                                                <option value="">--선택안함--</option>
+                                                <option value="채소">채소</option>
+                                                <option value="과일">과일</option>
+                                                <option value="유제품">유제품</option>
+                                                <option value="유제품">육류</option>
+                                                <option value="기타">기타</option>
+                                            </select><br/>
+                                        </div>
+                                        <label>유통기한 :</label>
+                                        <div id="exdate-input" className="form-row">
+                                            <input type="date" class="form-control" id="usr"/>
+                                        </div>
+                                        <button type="button" class="btn btn-info">추가하기</button>
+                                    </form>
+                                </div>
+                            </div><hr/>
+                            {/* Go Recipe Btn */}
                         </div>
                     </div>
                 </div>

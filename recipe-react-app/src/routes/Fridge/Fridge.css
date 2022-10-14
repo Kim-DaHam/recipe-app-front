@@ -33,13 +33,13 @@
 }
 
 #ingredients-searchBar #i-category {
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 25px;
 }
 
 #ingredients-list, #ingredients-btn {
     margin: auto;
-    margin-top: 20px;
+    margin-top: 15px;
     width: 550px;
 }
 
@@ -63,4 +63,35 @@
 
 #ingredients-list #delete-btn {
     margin-top: 20px;
+}
+
+#ingredientAdd-container{
+    width: 550px;
+    margin-left: 50px;
+}
+
+#ingredientAdd-container .w3-container {
+    padding: 20px;
+    padding-left: 45px;
+    padding-bottom: 45px;
+}
+
+#ingredientAdd-container label {
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+#ingredientAdd-container input {
+    width: 320px;
+    margin-bottom: 15px;
+}
+
+#ingredientAdd-container button {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+#ingredientAdd-container #category-input {
+    margin-bottom: 15px;
 }
