@@ -1,0 +1,51 @@
+#fridge-container {
+    width: 600px;
+    height: 700px;
+}
+
+#fridge-container{
+    margin-left: 15px;
+    margin-right: 60px;
+}
+
+#ingredients-searchBar form {
+    margin-top: 25px;
+}
+
+#ingredients-searchBar .input-group{
+    width: 450px;
+    margin: auto;
+}
+
+#ingredients-searchBar #i-category {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+#ingredients-list, #ingredients-btn {
+    margin: auto;
+    margin-top: 15px;
+    width: 550px;
+}
+
+#ingredients-list .list-group {
+    max-height: 480px;
+    padding: 5px;
+}
+
+#ingredients-list .list-group a {
+    padding-left: 38px;
+}
+
+#ingredients-list .list-group button {
+    width: 15px;
+    height: 22px;
+    font-size: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ingredients-list #delete-btn {
+    margin-top: 20px;
+}
