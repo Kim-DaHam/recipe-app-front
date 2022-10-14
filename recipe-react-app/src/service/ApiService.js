@@ -46,6 +46,10 @@ export function signin(userDTO) {
             window.location.href="/fridge";
         }
     })
+    .catch((error)=>{
+        console.log('로그인 실패...');
+        return false;
+    })
 }
 
 export function signup(userDTO){
