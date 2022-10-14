@@ -41,13 +41,16 @@ class Fridge extends React.Component {
                             </div>
                             {/* Ingredients List */}
                             <div id="ingredients-list" class="w3-container">
-                                <div class="list-group">
+                                <div class="list-group pre-scrollable">
                                     <a href="#" class="list-group-item list-group-item-action">
                                         <input type="checkbox" class="form-check-input"/>
                                         First item
                                         <button type="button" class="btn btn-danger w3-right"><b>―</b></button>
                                     </a>
                                 </div>
+                            </div>
+                            {/* Ingredients Btn */}
+                            <div id="ingredients-btn" class="w3-container">
                                 <div id="delete-btn" class="w3-row">
                                     <div class="w3-col m8 s12">
                                         <p>

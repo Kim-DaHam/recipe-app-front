@@ -37,10 +37,15 @@
     margin-left: 25px;
 }
 
-#ingredients-list {
+#ingredients-list, #ingredients-btn {
     margin: auto;
     margin-top: 20px;
     width: 550px;
+}
+
+#ingredients-list .list-group {
+    max-height: 480px;
+    padding: 5px;
 }
 
 #ingredients-list .list-group a {
