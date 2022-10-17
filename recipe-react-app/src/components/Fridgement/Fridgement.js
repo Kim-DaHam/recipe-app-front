@@ -1,9 +1,48 @@
 import React from 'react';
 import './Fridgement.css';
+import {call} from '../../service/ApiService';
+import Grocery from '../Grocery/Grocery';
 
 class Fridgement extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            groceries: props.groceryList
+        };
+        this.delete = props.delete;
+        this.update = props.update;
+        //console.log(this.state.groceries);
+    }
+
+    deleteGrocery = (item) => {
+        this.delete(item);
+    }
+
+    deleteChecked = () => {
+        this.delete(this.state.groceries);
+    }
+
+    deleteAll = () => {
+        const deleteList = this.state.groceries;
+        deleteList.map((item, idx)=>{
+            item.checked = true;
+        })
+        this.delete(deleteList);
+    }
 
     render() {
+        console.log('Fridgement.js is rendering!');
+        console.log(this.state.groceries);
+        var groceryList = this.state.groceries.length > 0 && (
+            <div id="ingredients-list" className="w3-container">
+                <div className="list-group pre-scrollable">
+                    {this.state.groceries.map((grocery, idx) => (
+                        <Grocery key={idx} grocery={grocery} delete={this.deleteGrocery} update={this.update}/>
+                    ))}
+                </div>
+            </div>
+        )
+
         return (
             <>
             {/* Fridge */}
@@ -27,22 +66,15 @@ class Fridgement extends React.Component {
                         <option value="기타">기타</option>
                     </select>
                 </div>
-                {/* Ingredients List */}
-                <div id="ingredients-list" className="w3-container">
-                    <div className="list-group pre-scrollable">
-                        <a href="#" className="list-group-item list-group-item-action">
-                            <input type="checkbox" className="form-check-input"/>
-                            First item
-                            <button type="button" className="btn btn-danger w3-right"><b>―</b></button>
-                        </a>
-                    </div>
-                </div>
+                {groceryList}
                 {/* Ingredients Btn */}
                 <div id="ingredients-btn" className="w3-container">
                     <div id="delete-btn" className="w3-row">
-                        <div class="w3-col m8 s12">
+                        <div className="w3-col m8 s12">
                             <p>
-                                <button className="w3-button w3-padding-small w3-white w3-border">
+                                <button 
+                                onClick={this.deleteAll}
+                                className="w3-button w3-padding-small w3-white w3-border">
                                     <b>전체삭제</b>
                                 </button>
                             </p>
@@ -50,7 +82,9 @@ class Fridgement extends React.Component {
                         <div className="w3-col m4 w3-hide-small">
                             <p>
                                 <span className="w3-padding-small w3-right">
-                                    <span className="w3-tag">0</span><b>  선택삭제</b>
+                                    <span className="w3-tag">0</span>
+                                    <b type="button" onClick={this.deleteChecked} 
+                                    style={{marginLeft:'8px'}}>선택삭제</b>
                                 </span>
                             </p>
                         </div>
