@@ -41,6 +41,16 @@ class AddRecipe extends React.Component {
                                         <input type="text" className="form-control" maxLength='25'/>
                                         <button type="button" class="btn btn-secondary">추가</button>
                                     </div>
+                                    <div id="ingredient-collapse" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>
+                                                    ingredient #1
+                                                    <button type="button" className="btn btn-danger w3-right"><b>―</b></button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                     <div id="howto-input" className="form-row">
                                         <label>조리방법* :</label>
                                         <textarea className="form-control" maxLength='5000'/>
