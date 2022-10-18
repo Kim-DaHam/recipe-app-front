@@ -3,6 +3,34 @@ import { Link } from "react-router-dom";
 import './AddRecipe.css';
 
 class AddRecipe extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.state = {
+            recipe: {rname:"", rcategory:"", rcontent:"", rimage:""}
+        };
+        this.addRecipe = props.addRecipe;
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        const gname = data.get("gname");
+        const gcategory = data.get("gcategory");
+        const gexdate = document.getElementById("exdate").value;
+
+        const thisGrocery = this.state.grocery;
+        thisGrocery.name = gname;
+        thisGrocery.category = gcategory;
+        thisGrocery.exdate = gexdate;
+
+        document.getElementById("name-input").childNodes[0].value="";
+        document.getElementById("gcategory").childNodes[0].selected = true;
+
+        this.setState({grocery: thisGrocery});
+        this.addGrocery(this.state.grocery);
+    }
+
     render(){
         return(
             <div id="addrecipe" className="w3-display-container w3-light-grey">

@@ -17,6 +17,12 @@ class Recipe extends React.Component {
         //console.log(this.state.category);
     }
 
+    addRecipe=(item)=>{
+        call("/recipe", "POST", item).then((response)=>{
+            this.setState({recipes: response.data});
+        });
+    }
+
     componentDidMount() {
         console.log('Recipe.js componentDidMount!');
         call("/recipe", "GET", null).then((response)=>{
@@ -75,7 +81,7 @@ class Recipe extends React.Component {
                                 <b>뒤로가기</b>
                             </button>
                         </Link>
-                        <Link to="/addrecipe">
+                        <Link to={{pathname:"/addrecipe", state: {addRecipe: this.addRecipe}}}>
                             <button id="recipe-btn" type="button" className="btn btn-info">
                                 <b>레시피 등록</b>
                             </button>
