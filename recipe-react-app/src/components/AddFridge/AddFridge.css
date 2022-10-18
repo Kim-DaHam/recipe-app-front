@@ -27,31 +27,3 @@
 #ingredientAdd-container #category-input {
     margin-bottom: 15px;
 }
-
-#recipeOption-container {
-    width: 550;
-    padding: 20px;
-    padding-left: 20px;
-}
-
-#recipeOption-container>label {
-    font-size: 19px;
-}
-
-#recipeOption-container #radio-box {
-    background-color: rgb(237, 237, 237);
-    padding: 20px;
-}
-
-#recipeOption-container #radio-group label {
-    margin-right: 50px;
-}
-
-#recipeOption-container button {
-    height: 45px;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-right: 15px;
-    float: right;
-    background-color: rgb(255, 203, 251);
-}

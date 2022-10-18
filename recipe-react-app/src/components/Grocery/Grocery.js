@@ -30,6 +30,7 @@ class Grocery extends React.Component {
                 checked={grocery.checked}
                 onChange={this.checkboxEventHandler}/>
                     {grocery.name}
+                    <span style={{marginLeft:"30px"}}>{grocery.exdate}</span>
                 <button type="button" 
                 onClick={this.deleteEventHandler}
                 className="btn btn-danger w3-right"><b>―</b></button>

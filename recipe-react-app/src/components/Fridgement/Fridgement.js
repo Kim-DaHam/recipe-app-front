@@ -5,13 +5,13 @@ import Grocery from '../Grocery/Grocery';
 
 class Fridgement extends React.Component {
     constructor(props){
+        console.log('Fridgment constructor in!');
         super(props);
         this.state = {
             groceries: props.groceryList
         };
         this.delete = props.delete;
         this.update = props.update;
-        //console.log(this.state.groceries);
     }
 
     deleteGrocery = (item) => {
@@ -30,9 +30,16 @@ class Fridgement extends React.Component {
         this.delete(deleteList);
     }
 
+    componentDidUpdate(prevProps){
+        console.log('Fridgement.js is componentDidUpdate!');
+        if(this.props.groceryList !== prevProps.groceryList){
+            this.setState({groceries:this.props.groceryList});
+            console.log(this.state.groceries);
+        }
+    }
+
     render() {
         console.log('Fridgement.js is rendering!');
-        console.log(this.state.groceries);
         var groceryList = this.state.groceries.length > 0 && (
             <div id="ingredients-list" className="w3-container">
                 <div className="list-group pre-scrollable">

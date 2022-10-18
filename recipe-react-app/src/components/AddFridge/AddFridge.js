@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 import './AddFridge.css';
 
@@ -24,6 +23,9 @@ class AddFridge extends React.Component {
         thisGrocery.name = gname;
         thisGrocery.category = gcategory;
         thisGrocery.exdate = gexdate;
+
+        document.getElementById("name-input").childNodes[0].value="";
+        document.getElementById("gcategory").childNodes[0].selected = true;
 
         this.setState({grocery: thisGrocery});
         this.addGrocery(this.state.grocery);
@@ -64,28 +66,6 @@ class AddFridge extends React.Component {
                     </div>
                 </div><hr/>
             </div><br/>
-            {/* Go Recipe Btn */}
-            <div id="recipeOption-container" className="w3-col l4">
-                <label><b>언제 먹을 예정인가요?🍽️ (선택사항)</b></label><br/>
-                <div id="radio-box" className="w3-card w3-margin">
-                    <div className="w3-container">
-                    <div id="radio-group" className="form-check">
-                        <label className="form-check-label">
-                            <input type="radio" className="form-check-input" name="breakfast"/>아침
-                        </label>
-                        <label className="form-check-label">
-                            <input type="radio" className="form-check-input" name="lunch"/>점심
-                        </label>
-                        <label className="form-check-label">
-                            <input type="radio" className="form-check-input" name="dinner"/>저녁
-                        </label>
-                    </div>
-                    </div>
-                </div>
-                <Link to="/recipe">
-                    <button type="button" className="btn"><b>레시피 보러가기 》</b></button>
-                </Link>
-            </div>
             </>
         )
     }

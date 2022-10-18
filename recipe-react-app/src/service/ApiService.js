@@ -67,3 +67,8 @@ export function signup(userDTO){
         return Promise.reject(error);
     })
 }
+
+export function signout() {
+    localStorage.setItem(ACCESS_TOKEN,null);
+    window.location.href="/";
+}

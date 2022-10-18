@@ -8,6 +8,7 @@ import AdminPage from './AdminPage/AdminPage';
 import Fridge from './Fridge/Fridge';
 import Recipe from './Recipe/Recipe';
 import AddRecipe from './AddRecipe/AddRecipe';
+import RecipeDetail from './RecipeDetail/RecipeDetail';
 
 class AppRouter extends React.Component {
     render(){
@@ -23,6 +24,7 @@ class AppRouter extends React.Component {
                         <Route path="/fridge" element={<Fridge/>}/>
                         <Route path="/recipe" element={<Recipe/>}/>
                         <Route path="/addrecipe" element={<AddRecipe/>}/>
+                        <Route path="/recipedetail" element={<RecipeDetail/>}/>
                     </Routes>
                 </div>
             </BrowserRouter>
