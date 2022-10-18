@@ -11,7 +11,8 @@ class Fridge extends React.Component {
         super (props);
         this.state = {
             groceries: [],
-            category: ""
+            category: "",
+            user:null
         };
     }
 
@@ -45,10 +46,21 @@ class Fridge extends React.Component {
         call("/fridge", "GET", null).then((response)=>{
             this.setState({groceries: response.data});
         });
+        call("/auth", "GET", null).then((response)=>{
+            console.log(response.data);
+            this.setState({user:response.data});
+        })
     }
 
     render () {
         console.log('Fridge.js is rendering!');
+        var header = this.state.user !== null && (
+            <header className="w3-container w3-topleft w3-padding-32"> 
+            <h1><b>{this.state.user}님의 냉장고</b></h1>
+            <span type="button" id="logout" onClick={signout} className="w3-tag">로그아웃</span>
+            </header>
+        )
+
         var fridgeContent = this.state.groceries.length > 0 && (
             <>
                 <Fridgement groceryList={this.state.groceries} delete={this.deleteGrocery} update={this.updateGrocery}></Fridgement>
@@ -59,11 +71,7 @@ class Fridge extends React.Component {
         return(
             <div id="fridge" className="w3-light-grey">
                 <div className="w3-content">
-                    {/* Header */}
-                    <header className="w3-container w3-topleft w3-padding-32"> 
-                    <h1><b>{}님의 냉장고</b></h1>
-                    <span type="button" id="logout" onClick={signout} className="w3-tag">로그아웃</span>
-                    </header>
+                    {header}
                     {/* Contents */}
                     <div id="content-box" className="w3-col">
                         {fridgeContent}
